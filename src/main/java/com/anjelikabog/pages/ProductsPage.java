@@ -41,9 +41,7 @@ public class ProductsPage extends BasePages{
     }
 
     public void goToElement(){
-        WebElement elem = getDriver().findElements(By.xpath("//article[contains(@data-autotest-id,'product-snippet')]//h3[@data-zone-name='title']//span")).get(0);
-        wait.until(ExpectedConditions.visibilityOf(elem)).click();
-//        elem.click();
+        wait.until(ExpectedConditions.visibilityOf(getDriver().findElements(By.xpath("//article[contains(@data-autotest-id,'product-snippet')]//h3[@data-zone-name='title']//span")).get(0))).click();
     }
 
     public String getTextTitle(){
